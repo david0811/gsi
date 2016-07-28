@@ -1,19 +1,12 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 10.3' *)
-
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     39605,        906]
-NotebookOptionsPosition[     38220,        857]
-NotebookOutlinePosition[     38581,        873]
-CellTagsIndexPosition[     38538,        870]
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     38110,        855]
+NotebookOptionsPosition[     36768,        805]
+NotebookOutlinePosition[     37129,        821]
+CellTagsIndexPosition[     37086,        818]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -145,25 +138,36 @@ Mx50n4/HXFfG/wLR+y31
    3.6786889065502462`*^9, 3.6786893295301228`*^9, {3.678690077316639*^9, 
    3.678690084434372*^9}, 3.6786901191565523`*^9, 3.6786902861022997`*^9, 
    3.678693320510614*^9, 3.678695615112213*^9, 3.678696419006205*^9, 
-   3.678697444784646*^9, 3.678699028794392*^9, 3.678704448522813*^9}]
+   3.678697444784646*^9, 3.678699028794392*^9, 3.678704448522813*^9, 
+   3.678705084232093*^9, 3.6787067473337708`*^9}]
 }, Open  ]],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"f", "[", "En_", "]"}], ":=", 
    RowBox[{"2", 
     RowBox[{"(", 
-     RowBox[{"V", "-", "En"}], ")"}]}]}], ";"}]], "Input",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQAGIQ/Y41oig947Uj1773pSB62taHDB1A+kLYczAdW+PI
-DqLF0o25QPQ0DRsREF0vEikKos+YG0uC6F3s06RA9K2+Ek0QfYPlHpg+dGup
-L4gO53wCpt/N6k0C0aqGgukgOr3PPgdEz+n+XAaitz252weikwRUp4Fo6TVM
-e0F0wpT4AyD6VXHQkk4g7b4gfxWIPtGhuRlMSyltA9FrZgUfBdGzWtPA9JPb
-dme6QP4r/3EJRMe9aGTvBtI1nxaDaX7z0lQQbZd7GUyb/WBm6wXS7fEL2EH0
-u9gP0n1AerY2lwqIjmr7Vw+il5h+6AHRywKVtoPonLuJp0B0ZtiNryB6Zfns
-byCaxfbzXxA96Q7zfxCddueATz+QdrD75AuiAfWWwww=
-  "]],
+     RowBox[{"V", "-", "En"}], ")"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Eni", "=", "0.1"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.678616466750724*^9, 3.678616495491948*^9}, {
+   3.6786831430534163`*^9, 3.678683143229347*^9}, {3.678683194046431*^9, 
+   3.6786832176063337`*^9}, {3.6786832978799543`*^9, 3.678683306783752*^9}, {
+   3.678683337600561*^9, 3.678683348688443*^9}, {3.678683467642438*^9, 
+   3.6786834709380913`*^9}, {3.678683757182954*^9, 3.67868375912614*^9}, {
+   3.6786839244251623`*^9, 3.678683960537249*^9}, {3.678684001986133*^9, 
+   3.678684087610792*^9}, {3.678684278934169*^9, 3.67868433715825*^9}, {
+   3.678684648083509*^9, 3.678684674986862*^9}, {3.6786864985766497`*^9, 
+   3.678686547488315*^9}, {3.678686617297947*^9, 3.678686641065769*^9}, {
+   3.678686762612631*^9, 3.678686763203809*^9}, {3.678688865964342*^9, 
+   3.678688919764531*^9}, {3.678689340059615*^9, 3.67868934112335*^9}, {
+   3.678690091662971*^9, 3.678690094607085*^9}, {3.678693424124049*^9, 
+   3.678693437011661*^9}, {3.678695647511466*^9, 3.678695712317823*^9}, {
+   3.6786964479539003`*^9, 3.678696551506548*^9}, {3.678696889072467*^9, 
+   3.678697043058279*^9}, {3.678697390760548*^9, 3.678697396858357*^9}, {
+   3.678697455601198*^9, 3.678697464120675*^9}, {3.678698086026904*^9, 
+   3.678698095570099*^9}, 3.6787067523109303`*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -366,7 +370,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"For", "[", 
    RowBox[{
-    RowBox[{"En", "=", "0.1"}], ",", 
+    RowBox[{"En", "=", "Eni"}], ",", 
     RowBox[{
      RowBox[{"\[Delta]", " ", "\[Delta]1"}], "\[GreaterEqual]", "0"}], ",", 
     RowBox[{"En", "+=", "0.0001"}], ",", 
@@ -380,7 +384,7 @@ Cell[BoxData[
   3.678700459143572*^9, 3.678700526663553*^9}, {3.678700563153145*^9, 
   3.678700599256894*^9}, {3.678700760796939*^9, 3.678700761803561*^9}, {
   3.67870428312304*^9, 3.678704326499178*^9}, {3.678704504199744*^9, 
-  3.678704551542384*^9}}],
+  3.678704551542384*^9}, {3.67870670247922*^9, 3.678706704301124*^9}}],
 
 Cell[BoxData[
  RowBox[{"tail", "[", "0.3920", "]"}]], "Input",
@@ -782,7 +786,8 @@ Cell[BoxData[
      RowBox[{"[", "step", "]"}], "]"}], "=", "0"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.67870480525134*^9, 3.678704820178275*^9}}],
 
-Cell[CellGroupData[{
+Cell[BoxData["\[Delta]"], "Input",
+ CellChangeTimes->{{3.67870491089708*^9, 3.678704913163624*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -796,67 +801,10 @@ Cell[BoxData[
      RowBox[{"tail", "[", "En", "]"}], ";", 
      RowBox[{"tail1", "[", 
       RowBox[{"En", "+", "0.001"}], "]"}]}]}], "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.67870482410756*^9, 3.678704838530954*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partw"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part \[NoBreak]\\!\\(\\*RowBox[{\\\"2\\\"}]\\)\[NoBreak] \
-of \[NoBreak]\\!\\(\\*RowBox[{\\\"2\\\", \\\"[\\\", \\\"0.4`\\\", \\\"]\\\"}]\
-\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
-\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.678704828735139*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partw"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part \[NoBreak]\\!\\(\\*RowBox[{\\\"3\\\"}]\\)\[NoBreak] \
-of \[NoBreak]\\!\\(\\*RowBox[{\\\"2\\\", \\\"[\\\", \\\"0.4`\\\", \\\"]\\\"}]\
-\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
-\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.678704828840907*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partw"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part \[NoBreak]\\!\\(\\*RowBox[{\\\"3\\\"}]\\)\[NoBreak] \
-of \[NoBreak]\\!\\(\\*RowBox[{\\\"2\\\", \\\"[\\\", \\\"0.4`\\\", \\\"]\\\"}]\
-\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
-\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.678704828844099*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
-\\\"partw\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
-this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.678704828844976*^9}],
-
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.67870489055716*^9}]
-}, Open  ]]
+ CellChangeTimes->{{3.67870482410756*^9, 3.678704838530954*^9}}]
 },
 WindowSize->{845, 953},
-WindowMargins->{{238, Automatic}, {Automatic, 2}},
+WindowMargins->{{Automatic, 214}, {5, Automatic}},
 CellContext->Notebook,
 FrontEndVersion->"10.3 for Linux x86 (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
@@ -872,44 +820,37 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 227, 5, 41, "Input"],
+Cell[400, 13, 227, 5, 41, "Input"],
 Cell[CellGroupData[{
-Cell[810, 29, 1757, 42, 160, "Input"],
-Cell[2570, 73, 3961, 74, 247, "Output"]
+Cell[652, 22, 1757, 42, 160, "Input"],
+Cell[2412, 66, 4011, 75, 247, "Output"]
 }, Open  ]],
-Cell[6546, 150, 624, 15, 32, "Input"],
-Cell[7173, 167, 2937, 82, 314, "Input"],
-Cell[10113, 251, 478, 15, 77, "Input"],
-Cell[10594, 268, 3141, 94, 241, "Input"],
-Cell[13738, 364, 841, 18, 32, "Input"],
-Cell[14582, 384, 128, 2, 32, "Input"],
+Cell[6438, 144, 1450, 25, 55, "Input"],
+Cell[7891, 171, 2937, 82, 314, "Input"],
+Cell[10831, 255, 478, 15, 77, "Input"],
+Cell[11312, 272, 3141, 94, 241, "Input"],
+Cell[14456, 368, 886, 18, 32, "Input"],
+Cell[15345, 388, 128, 2, 32, "Input"],
 Cell[CellGroupData[{
-Cell[14735, 390, 231, 6, 32, "Input"],
-Cell[14969, 398, 9575, 168, 247, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[24581, 571, 102, 1, 32, "Input"],
-Cell[24686, 574, 110, 1, 32, "Output"]
+Cell[15498, 394, 231, 6, 32, "Input"],
+Cell[15732, 402, 9575, 168, 247, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24833, 580, 374, 9, 55, "Input"],
-Cell[25210, 591, 9599, 168, 238, "Output"]
+Cell[25344, 575, 102, 1, 32, "Input"],
+Cell[25449, 578, 110, 1, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34846, 764, 127, 2, 32, "Input"],
-Cell[34976, 768, 183, 3, 32, "Output"]
+Cell[25596, 584, 374, 9, 55, "Input"],
+Cell[25973, 595, 9599, 168, 238, "Output"]
 }, Open  ]],
-Cell[35174, 774, 273, 8, 32, "Input"],
 Cell[CellGroupData[{
-Cell[35472, 786, 449, 12, 32, "Input"],
-Cell[35924, 800, 544, 11, 23, "Message"],
-Cell[36471, 813, 544, 11, 23, "Message"],
-Cell[37018, 826, 544, 11, 23, "Message"],
-Cell[37565, 839, 560, 12, 23, "Message"],
-Cell[38128, 853, 76, 1, 32, "Output"]
-}, Open  ]]
+Cell[35609, 768, 127, 2, 32, "Input"],
+Cell[35739, 772, 183, 3, 32, "Output"]
+}, Open  ]],
+Cell[35937, 778, 273, 8, 32, "Input"],
+Cell[36213, 788, 99, 1, 32, "Input"],
+Cell[36315, 791, 449, 12, 32, "Input"]
 }
 ]
 *)
 
-(* End of internal cache information *)
