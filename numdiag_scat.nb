@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     52791,       1154]
-NotebookOptionsPosition[     50500,       1083]
-NotebookOutlinePosition[     50838,       1098]
-CellTagsIndexPosition[     50795,       1095]
+NotebookDataLength[     25119,        629]
+NotebookOptionsPosition[     23881,        584]
+NotebookOutlinePosition[     24219,        599]
+CellTagsIndexPosition[     24176,        596]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -506,15 +506,16 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"wave", "[", 
    RowBox[{"En_", ",", "r_"}], "]"}], ":=", 
-  RowBox[{"Exp", "[", 
+  RowBox[{"Sin", "[", 
    RowBox[{
-    RowBox[{"-", 
-     RowBox[{"k", "[", "En", "]"}]}], " ", "r"}], "]"}]}]], "Input",
+    RowBox[{
+     RowBox[{"k", "[", "En", "]"}], " ", "r"}], "+", "\[Delta]"}], 
+   "]"}]}]], "Input",
  CellChangeTimes->{{3.679286348056387*^9, 3.67928637503428*^9}, 
    3.679289773148593*^9, {3.6792902199942904`*^9, 3.6792902689865913`*^9}, {
    3.679290326372958*^9, 3.67929032983473*^9}, {3.679290436757708*^9, 
    3.67929044687678*^9}, {3.679290489640691*^9, 3.679290493254692*^9}, 
-   3.679290778399271*^9}],
+   3.679290778399271*^9, {3.679302251603621*^9, 3.6793022750441427`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -537,38 +538,39 @@ Cell[BoxData[
    3.679290778399271*^9, 3.679290781509623*^9}, {3.6792912227771063`*^9, 
    3.67929122660081*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"ListLinePlot", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"Transpose", "[", 
-        RowBox[{"{", 
-         RowBox[{"rlist", ",", 
-          RowBox[{"evec", "\[LeftDoubleBracket]", 
-           RowBox[{"-", "i"}], "\[RightDoubleBracket]"}]}], "}"}], "]"}], ",", 
-       RowBox[{"Transpose", "[", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"Range", "[", 
-           RowBox[{"rmax", ",", "10", ",", "dr"}], "]"}], ",", 
+ RowBox[{"(*", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"ListLinePlot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"rlist", ",", 
+           RowBox[{"evec", "\[LeftDoubleBracket]", 
+            RowBox[{"-", "i"}], "\[RightDoubleBracket]"}]}], "}"}], "]"}], 
+        ",", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
           RowBox[{
-           RowBox[{"const", "[", "i", "]"}], " ", 
-           RowBox[{"wave", "[", 
-            RowBox[{
-             RowBox[{"eval", "[", 
-              RowBox[{"[", 
-               RowBox[{"-", "i"}], "]"}], "]"}], ",", 
-             RowBox[{"Range", "[", 
-              RowBox[{"rmax", ",", "10", ",", "dr"}], "]"}]}], "]"}]}]}], 
-         "}"}], "]"}]}], "}"}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"i", ",", "1", ",", "n", ",", "1"}], "}"}]}], "]"}]], "Input",
+           RowBox[{"Range", "[", 
+            RowBox[{"rmax", ",", "10", ",", "dr"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"const", "[", "i", "]"}], " ", 
+            RowBox[{"wave", "[", 
+             RowBox[{
+              RowBox[{"eval", "[", 
+               RowBox[{"[", 
+                RowBox[{"-", "i"}], "]"}], "]"}], ",", 
+              RowBox[{"Range", "[", 
+               RowBox[{"rmax", ",", "10", ",", "dr"}], "]"}]}], "]"}]}]}], 
+          "}"}], "]"}]}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "n", ",", "1"}], "}"}]}], "]"}], 
+  "*)"}]], "Input",
  CellChangeTimes->{{3.679286348056387*^9, 3.67928637503428*^9}, 
    3.679289773148593*^9, {3.6792902199942904`*^9, 3.6792902689865913`*^9}, {
    3.679290326372958*^9, 3.67929032983473*^9}, {3.679290436757708*^9, 
@@ -577,509 +579,8 @@ Cell[BoxData[
    3.679291013981873*^9}, {3.6792911572084703`*^9, 3.679291171520317*^9}, {
    3.6792912134172573`*^9, 3.679291215407714*^9}, {3.6792913112106133`*^9, 
    3.679291315618211*^9}, {3.6792913620591917`*^9, 3.67929137865131*^9}, {
-   3.679291805771317*^9, 3.679291809858371*^9}}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`i$$ = 1, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`i$$], 1, 401, 1}}, Typeset`size$$ = {
-    610.5, {6934., 13.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i$14477$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`i$$ = 1}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`i$$, $CellContext`i$14477$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> ListLinePlot[{
-         Transpose[{$CellContext`rlist, 
-           Part[$CellContext`evec, -$CellContext`i$$]}], 
-         Transpose[{
-           
-           Range[$CellContext`rmax, 
-            10, $CellContext`dr], $CellContext`const[$CellContext`i$$] \
-$CellContext`wave[
-             Part[$CellContext`eval, -$CellContext`i$$], 
-             Range[$CellContext`rmax, 10, $CellContext`dr]]}]}, PlotRange -> 
-        All], "Specifications" :> {{$CellContext`i$$, 1, 401, 1}}, 
-      "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{658., {3525., 3532.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.679291172516366*^9, {3.679291217524787*^9, 3.679291281249577*^9}, 
-   3.679291333954398*^9, 3.679291379717243*^9, 3.6792918105996037`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part specification \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"evec\\\", \\\"\[LeftDoubleBracket]\\\", \
-RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\[RightDoubleBracket]\\\"}]\\)\[NoBreak] \
-is longer than depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
-\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046160887*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{\\\"rlist\\\", \\\",\\\", RowBox[{\\\"evec\\\", \\\"\
-\[LeftDoubleBracket]\\\", RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\
-\[RightDoubleBracket]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046197027*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Range", "::", "range"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Range specification in \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"Range\\\", \\\"[\\\", RowBox[{\\\"rmax\\\", \\\
-\",\\\", \\\"10\\\", \\\",\\\", \\\"dr\\\"}], \\\"]\\\"}]\\)\[NoBreak] does \
-not have appropriate bounds. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/Range/range\\\", ButtonNote -> \
-\\\"Range::range\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046214766*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part specification \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"eval\\\", \\\"\[LeftDoubleBracket]\\\", \
-RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\[RightDoubleBracket]\\\"}]\\)\[NoBreak] \
-is longer than depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
-\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046253601*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Range", "::", "range"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Range specification in \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"Range\\\", \\\"[\\\", RowBox[{\\\"rmax\\\", \\\
-\",\\\", \\\"10\\\", \\\",\\\", \\\"dr\\\"}], \\\"]\\\"}]\\)\[NoBreak] does \
-not have appropriate bounds. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/Range/range\\\", ButtonNote -> \
-\\\"Range::range\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046272677*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"Range\\\", \\\"[\\\", RowBox[{\\\"rmax\\\", \
-\\\",\\\", \\\"10\\\", \\\",\\\", \\\"dr\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{RowBox[{\\\"const\\\", \\\"[\\\", \\\"1\\\", \\\"]\\\"}], \\\" \\\", \
-RowBox[{\\\"wave\\\", \\\"[\\\", RowBox[{RowBox[{\\\"eval\\\", \\\"\
-\[LeftDoubleBracket]\\\", RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\
-\[RightDoubleBracket]\\\"}], \\\",\\\", RowBox[{\\\"Range\\\", \\\"[\\\", \
-RowBox[{\\\"rmax\\\", \\\",\\\", \\\"10\\\", \\\",\\\", \\\"dr\\\"}], \\\"]\\\
-\"}]}], \\\"]\\\"}]}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6792920463093348`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Range", "::", "range"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Range specification in \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"Range\\\", \\\"[\\\", RowBox[{\\\"rmax\\\", \\\
-\",\\\", \\\"10.`16.\\\", \\\",\\\", \\\"dr\\\"}], \\\"]\\\"}]\\)\[NoBreak] \
-does not have appropriate bounds. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Range/range\\\", \
-ButtonNote -> \\\"Range::range\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.67929204638218*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Range\\\", \\\"::\\\", \
-\\\"range\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
-this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046423098*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"Range\\\", \\\"[\\\", RowBox[{\\\"rmax\\\", \
-\\\",\\\", \\\"10.`16.\\\", \\\",\\\", \\\"dr\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{RowBox[{\\\"const\\\", \\\"[\\\", \\\"1.`16.\\\", \\\"]\\\"}], \\\" \
-\\\", RowBox[{\\\"wave\\\", \\\"[\\\", RowBox[{RowBox[{\\\"eval\\\", \\\"\
-\[LeftDoubleBracket]\\\", RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\
-\[RightDoubleBracket]\\\"}], \\\",\\\", RowBox[{\\\"Range\\\", \\\"[\\\", \
-RowBox[{\\\"rmax\\\", \\\",\\\", \\\"10.`16.\\\", \\\",\\\", \\\"dr\\\"}], \\\
-\"]\\\"}]}], \\\"]\\\"}]}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046424161*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Transpose\\\", \\\"::\\\", \\\"nmtx\\\
-\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679292046469709*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part specification \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"evec\\\", \\\"\[LeftDoubleBracket]\\\", \
-RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\[RightDoubleBracket]\\\"}]\\)\[NoBreak] \
-is longer than depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
-\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679293919634596*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"0.`\\\", \\\",\\\", \\\"0.01`\\\", \
-\\\",\\\", \\\"0.02`\\\", \\\",\\\", \\\"0.03`\\\", \\\",\\\", \\\"0.04`\\\", \
-\\\",\\\", \\\"0.05`\\\", \\\",\\\", \\\"0.06`\\\", \\\",\\\", \\\"0.07`\\\", \
-\\\",\\\", \\\"0.08`\\\", \\\",\\\", \\\"0.09`\\\", \\\",\\\", \\\"0.1`\\\", \
-\\\",\\\", \\\"0.11`\\\", \\\",\\\", \\\"0.12`\\\", \\\",\\\", \\\"0.13`\\\", \
-\\\",\\\", \\\"0.14`\\\", \\\",\\\", \\\"0.15`\\\", \\\",\\\", \\\"0.16`\\\", \
-\\\",\\\", \\\"0.17`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"15\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \\\"0.33`\\\", \\\",\\\", \
-\\\"0.34`\\\", \\\",\\\", \\\"0.35000000000000003`\\\", \\\",\\\", \
-\\\"0.36`\\\", \\\",\\\", \\\"0.37`\\\", \\\",\\\", \\\"0.38`\\\", \\\",\\\", \
-\\\"0.39`\\\", \\\",\\\", \\\"0.4`\\\", \\\",\\\", \\\"0.41000000000000003`\\\
-\", \\\",\\\", \\\"0.42`\\\", \\\",\\\", \\\"0.43`\\\", \\\",\\\", \
-\\\"0.44`\\\", \\\",\\\", \\\"0.45`\\\", \\\",\\\", \\\"0.46`\\\", \\\",\\\", \
-\\\"0.47000000000000003`\\\", \\\",\\\", \\\"0.48`\\\", \\\",\\\", \
-\\\"0.49`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"351\\\", \\\"\
-\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\
-\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] \
-cannot be transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
-\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679293919658998*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Part", "::", "partd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Part specification \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"eval\\\", \\\"\[LeftDoubleBracket]\\\", \
-RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\[RightDoubleBracket]\\\"}]\\)\[NoBreak] \
-is longer than depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
-\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.67929391969656*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"4.`\\\", \\\",\\\", \\\"4.01`\\\", \
-\\\",\\\", \\\"4.02`\\\", \\\",\\\", \\\"4.03`\\\", \\\",\\\", \\\"4.04`\\\", \
-\\\",\\\", \\\"4.05`\\\", \\\",\\\", \\\"4.06`\\\", \\\",\\\", \\\"4.07`\\\", \
-\\\",\\\", \\\"4.08`\\\", \\\",\\\", \\\"4.09`\\\", \\\",\\\", \\\"4.1`\\\", \
-\\\",\\\", \\\"4.11`\\\", \\\",\\\", \\\"4.12`\\\", \\\",\\\", \\\"4.13`\\\", \
-\\\",\\\", \\\"4.14`\\\", \\\",\\\", \\\"4.15`\\\", \\\",\\\", \\\"4.16`\\\", \
-\\\",\\\", \\\"4.17`\\\", \\\",\\\", \\\"4.18`\\\", \\\",\\\", \\\"4.19`\\\", \
-\\\",\\\", \\\"4.2`\\\", \\\",\\\", \\\"4.21`\\\", \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
-\\\"4.29`\\\", \\\",\\\", \\\"4.3`\\\", \\\",\\\", \\\"4.31`\\\", \\\",\\\", \
-\\\"4.32`\\\", \\\",\\\", \\\"4.33`\\\", \\\",\\\", \\\"4.34`\\\", \\\",\\\", \
-\\\"4.35`\\\", \\\",\\\", \\\"4.36`\\\", \\\",\\\", \\\"4.37`\\\", \\\",\\\", \
-\\\"4.38`\\\", \\\",\\\", \\\"4.39`\\\", \\\",\\\", \\\"4.4`\\\", \\\",\\\", \
-\\\"4.41`\\\", \\\",\\\", \\\"4.42`\\\", \\\",\\\", \\\"4.43`\\\", \\\",\\\", \
-\\\"4.44`\\\", \\\",\\\", \\\"4.45`\\\", \\\",\\\", \\\"4.46`\\\", \\\",\\\", \
-\\\"4.47`\\\", \\\",\\\", \\\"4.48`\\\", \\\",\\\", \\\"4.49`\\\", \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"551\\\", \\\"\[RightSkeleton]\\\"}]}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679293919717093*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"4.`\\\", \\\",\\\", \\\"4.01`\\\", \
-\\\",\\\", \\\"4.02`\\\", \\\",\\\", \\\"4.03`\\\", \\\",\\\", \\\"4.04`\\\", \
-\\\",\\\", \\\"4.05`\\\", \\\",\\\", \\\"4.06`\\\", \\\",\\\", \\\"4.07`\\\", \
-\\\",\\\", \\\"4.08`\\\", \\\",\\\", \\\"4.09`\\\", \\\",\\\", \\\"4.1`\\\", \
-\\\",\\\", \\\"4.11`\\\", \\\",\\\", \\\"4.12`\\\", \\\",\\\", \\\"4.13`\\\", \
-\\\",\\\", \\\"4.14`\\\", \\\",\\\", \\\"4.15`\\\", \\\",\\\", \\\"4.16`\\\", \
-\\\",\\\", \\\"4.17`\\\", \\\",\\\", \\\"4.18`\\\", \\\",\\\", \\\"4.19`\\\", \
-\\\",\\\", \\\"4.2`\\\", \\\",\\\", \\\"4.21`\\\", \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
-\\\"4.29`\\\", \\\",\\\", \\\"4.3`\\\", \\\",\\\", \\\"4.31`\\\", \\\",\\\", \
-\\\"4.32`\\\", \\\",\\\", \\\"4.33`\\\", \\\",\\\", \\\"4.34`\\\", \\\",\\\", \
-\\\"4.35`\\\", \\\",\\\", \\\"4.36`\\\", \\\",\\\", \\\"4.37`\\\", \\\",\\\", \
-\\\"4.38`\\\", \\\",\\\", \\\"4.39`\\\", \\\",\\\", \\\"4.4`\\\", \\\",\\\", \
-\\\"4.41`\\\", \\\",\\\", \\\"4.42`\\\", \\\",\\\", \\\"4.43`\\\", \\\",\\\", \
-\\\"4.44`\\\", \\\",\\\", \\\"4.45`\\\", \\\",\\\", \\\"4.46`\\\", \\\",\\\", \
-\\\"4.47`\\\", \\\",\\\", \\\"4.48`\\\", \\\",\\\", \\\"4.49`\\\", \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"551\\\", \\\"\[RightSkeleton]\\\"}]}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679293919749427*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Transpose\\\", \\\"::\\\", \\\"nmtx\\\
-\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679293919768877*^9}],
-
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.679294033909457*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"4.`\\\", \\\",\\\", \\\"4.01`\\\", \
-\\\",\\\", \\\"4.02`\\\", \\\",\\\", \\\"4.03`\\\", \\\",\\\", \\\"4.04`\\\", \
-\\\",\\\", \\\"4.05`\\\", \\\",\\\", \\\"4.06`\\\", \\\",\\\", \\\"4.07`\\\", \
-\\\",\\\", \\\"4.08`\\\", \\\",\\\", \\\"4.09`\\\", \\\",\\\", \\\"4.1`\\\", \
-\\\",\\\", \\\"4.11`\\\", \\\",\\\", \\\"4.12`\\\", \\\",\\\", \\\"4.13`\\\", \
-\\\",\\\", \\\"4.14`\\\", \\\",\\\", \\\"4.15`\\\", \\\",\\\", \\\"4.16`\\\", \
-\\\",\\\", \\\"4.17`\\\", \\\",\\\", \\\"4.18`\\\", \\\",\\\", \\\"4.19`\\\", \
-\\\",\\\", \\\"4.2`\\\", \\\",\\\", \\\"4.21`\\\", \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
-\\\"4.29`\\\", \\\",\\\", \\\"4.3`\\\", \\\",\\\", \\\"4.31`\\\", \\\",\\\", \
-\\\"4.32`\\\", \\\",\\\", \\\"4.33`\\\", \\\",\\\", \\\"4.34`\\\", \\\",\\\", \
-\\\"4.35`\\\", \\\",\\\", \\\"4.36`\\\", \\\",\\\", \\\"4.37`\\\", \\\",\\\", \
-\\\"4.38`\\\", \\\",\\\", \\\"4.39`\\\", \\\",\\\", \\\"4.4`\\\", \\\",\\\", \
-\\\"4.41`\\\", \\\",\\\", \\\"4.42`\\\", \\\",\\\", \\\"4.43`\\\", \\\",\\\", \
-\\\"4.44`\\\", \\\",\\\", \\\"4.45`\\\", \\\",\\\", \\\"4.46`\\\", \\\",\\\", \
-\\\"4.47`\\\", \\\",\\\", \\\"4.48`\\\", \\\",\\\", \\\"4.49`\\\", \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"551\\\", \\\"\[RightSkeleton]\\\"}]}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679294071945382*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"4.`\\\", \\\",\\\", \\\"4.01`\\\", \
-\\\",\\\", \\\"4.02`\\\", \\\",\\\", \\\"4.03`\\\", \\\",\\\", \\\"4.04`\\\", \
-\\\",\\\", \\\"4.05`\\\", \\\",\\\", \\\"4.06`\\\", \\\",\\\", \\\"4.07`\\\", \
-\\\",\\\", \\\"4.08`\\\", \\\",\\\", \\\"4.09`\\\", \\\",\\\", \\\"4.1`\\\", \
-\\\",\\\", \\\"4.11`\\\", \\\",\\\", \\\"4.12`\\\", \\\",\\\", \\\"4.13`\\\", \
-\\\",\\\", \\\"4.14`\\\", \\\",\\\", \\\"4.15`\\\", \\\",\\\", \\\"4.16`\\\", \
-\\\",\\\", \\\"4.17`\\\", \\\",\\\", \\\"4.18`\\\", \\\",\\\", \\\"4.19`\\\", \
-\\\",\\\", \\\"4.2`\\\", \\\",\\\", \\\"4.21`\\\", \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
-\\\"4.29`\\\", \\\",\\\", \\\"4.3`\\\", \\\",\\\", \\\"4.31`\\\", \\\",\\\", \
-\\\"4.32`\\\", \\\",\\\", \\\"4.33`\\\", \\\",\\\", \\\"4.34`\\\", \\\",\\\", \
-\\\"4.35`\\\", \\\",\\\", \\\"4.36`\\\", \\\",\\\", \\\"4.37`\\\", \\\",\\\", \
-\\\"4.38`\\\", \\\",\\\", \\\"4.39`\\\", \\\",\\\", \\\"4.4`\\\", \\\",\\\", \
-\\\"4.41`\\\", \\\",\\\", \\\"4.42`\\\", \\\",\\\", \\\"4.43`\\\", \\\",\\\", \
-\\\"4.44`\\\", \\\",\\\", \\\"4.45`\\\", \\\",\\\", \\\"4.46`\\\", \\\",\\\", \
-\\\"4.47`\\\", \\\",\\\", \\\"4.48`\\\", \\\",\\\", \\\"4.49`\\\", \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"551\\\", \\\"\[RightSkeleton]\\\"}]}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679294071986722*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"The first two levels of \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
-\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"4.`\\\", \\\",\\\", \\\"4.01`\\\", \
-\\\",\\\", \\\"4.02`\\\", \\\",\\\", \\\"4.03`\\\", \\\",\\\", \\\"4.04`\\\", \
-\\\",\\\", \\\"4.05`\\\", \\\",\\\", \\\"4.06`\\\", \\\",\\\", \\\"4.07`\\\", \
-\\\",\\\", \\\"4.08`\\\", \\\",\\\", \\\"4.09`\\\", \\\",\\\", \\\"4.1`\\\", \
-\\\",\\\", \\\"4.11`\\\", \\\",\\\", \\\"4.12`\\\", \\\",\\\", \\\"4.13`\\\", \
-\\\",\\\", \\\"4.14`\\\", \\\",\\\", \\\"4.15`\\\", \\\",\\\", \\\"4.16`\\\", \
-\\\",\\\", \\\"4.17`\\\", \\\",\\\", \\\"4.18`\\\", \\\",\\\", \\\"4.19`\\\", \
-\\\",\\\", \\\"4.2`\\\", \\\",\\\", \\\"4.21`\\\", \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
-\\\"4.29`\\\", \\\",\\\", \\\"4.3`\\\", \\\",\\\", \\\"4.31`\\\", \\\",\\\", \
-\\\"4.32`\\\", \\\",\\\", \\\"4.33`\\\", \\\",\\\", \\\"4.34`\\\", \\\",\\\", \
-\\\"4.35`\\\", \\\",\\\", \\\"4.36`\\\", \\\",\\\", \\\"4.37`\\\", \\\",\\\", \
-\\\"4.38`\\\", \\\",\\\", \\\"4.39`\\\", \\\",\\\", \\\"4.4`\\\", \\\",\\\", \
-\\\"4.41`\\\", \\\",\\\", \\\"4.42`\\\", \\\",\\\", \\\"4.43`\\\", \\\",\\\", \
-\\\"4.44`\\\", \\\",\\\", \\\"4.45`\\\", \\\",\\\", \\\"4.46`\\\", \\\",\\\", \
-\\\"4.47`\\\", \\\",\\\", \\\"4.48`\\\", \\\",\\\", \\\"4.49`\\\", \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"551\\\", \\\"\[RightSkeleton]\\\"}]}], \
-\\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\)\[NoBreak] cannot be transposed. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", \
-ButtonNote -> \\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679294072010008*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Transpose\\\", \\\"::\\\", \\\"nmtx\\\
-\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679294072031749*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ListLinePlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"0.`\\\", \\\
-\",\\\", RowBox[{RowBox[{\\\"0.0007098681533481607`\\\", \\\"\[VeryThinSpace]\
-\\\"}], \\\"-\\\", RowBox[{\\\"0.00002959219332056718`\\\", \\\" \\\", \\\"\
-\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
-RowBox[{\\\"0.01`\\\", \\\",\\\", RowBox[{RowBox[{\\\"0.001419652903045941`\\\
-\", \\\"\[VeryThinSpace]\\\"}], \\\"-\\\", \
-RowBox[{\\\"0.00005917534089062916`\\\", \\\" \\\", \
-\\\"\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
-RowBox[{\\\"0.02`\\\", \\\",\\\", \
-RowBox[{RowBox[{\\\"0.0021292709312600608`\\\", \\\"\[VeryThinSpace]\\\"}], \
-\\\"-\\\", RowBox[{\\\"0.00008874040184895593`\\\", \\\" \\\", \\\"\
-\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"46\\\", \\\"\[RightSkeleton]\\\"}], \
-\\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"0.49`\\\", \\\",\\\", \
-RowBox[{RowBox[{\\\"0.03380633309083327`\\\", \\\"\[VeryThinSpace]\\\"}], \
-\\\"-\\\", RowBox[{\\\"0.001296633963990955`\\\", \\\" \\\", \
-\\\"\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"351\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \
-\\\",\\\", RowBox[{\\\"Transpose\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\
-\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]}], \
-\\\"}\\\"}]\\)\[NoBreak] is not a list of numbers or pairs of numbers. \\!\\(\
-\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListLinePlot\\\", ButtonNote -> \
-\\\"ListLinePlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6792940720973263`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ListLinePlot", "::", "lpn"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"0.`\\\", \\\
-\",\\\", RowBox[{RowBox[{\\\"0.0007098681533481607`\\\", \\\"\[VeryThinSpace]\
-\\\"}], \\\"-\\\", RowBox[{\\\"0.00002959219332056718`\\\", \\\" \\\", \\\"\
-\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
-RowBox[{\\\"0.01`\\\", \\\",\\\", RowBox[{RowBox[{\\\"0.001419652903045941`\\\
-\", \\\"\[VeryThinSpace]\\\"}], \\\"-\\\", \
-RowBox[{\\\"0.00005917534089062916`\\\", \\\" \\\", \
-\\\"\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
-RowBox[{\\\"0.02`\\\", \\\",\\\", \
-RowBox[{RowBox[{\\\"0.0021292709312600608`\\\", \\\"\[VeryThinSpace]\\\"}], \
-\\\"-\\\", RowBox[{\\\"0.00008874040184895593`\\\", \\\" \\\", \\\"\
-\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"46\\\", \\\"\[RightSkeleton]\\\"}], \
-\\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"0.49`\\\", \\\",\\\", \
-RowBox[{RowBox[{\\\"0.03380633309083327`\\\", \\\"\[VeryThinSpace]\\\"}], \
-\\\"-\\\", RowBox[{\\\"0.001296633963990955`\\\", \\\" \\\", \
-\\\"\[ImaginaryI]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"\
-\[LeftSkeleton]\\\", \\\"351\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \
-\\\",\\\", RowBox[{\\\"Transpose\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\
-\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\
-\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\"]\\\"}]}], \
-\\\"}\\\"}]\\)\[NoBreak] is not a list of numbers or pairs of numbers. \\!\\(\
-\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListLinePlot\\\", ButtonNote -> \
-\\\"ListLinePlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.679294072188051*^9}]
-}, Open  ]]
+   3.679291805771317*^9, 3.679291809858371*^9}, {3.6793022036432877`*^9, 
+   3.679302205634606*^9}}]
 },
 WindowSize->{794, 990},
 WindowMargins->{{-9, Automatic}, {Automatic, -8}},
@@ -1127,35 +628,9 @@ Cell[CellGroupData[{
 Cell[20024, 489, 196, 3, 32, "Input"],
 Cell[20223, 494, 465, 7, 32, "Output"]
 }, Open  ]],
-Cell[20703, 504, 525, 12, 32, "Input"],
-Cell[21231, 518, 761, 19, 66, "Input"],
-Cell[CellGroupData[{
-Cell[22017, 541, 1701, 38, 121, "Input"],
-Cell[23721, 581, 2078, 43, 7074, "Output"],
-Cell[25802, 626, 581, 12, 23, "Message"],
-Cell[26386, 640, 653, 12, 23, "Message"],
-Cell[27042, 654, 587, 12, 23, "Message"],
-Cell[27632, 668, 581, 12, 23, "Message"],
-Cell[28216, 682, 587, 12, 23, "Message"],
-Cell[28806, 696, 1030, 17, 41, "Message"],
-Cell[29839, 715, 591, 12, 41, "Message"],
-Cell[30433, 729, 561, 12, 23, "Message"],
-Cell[30997, 743, 1043, 17, 59, "Message"],
-Cell[32043, 762, 564, 12, 23, "Message"],
-Cell[32610, 776, 581, 12, 23, "Message"],
-Cell[33194, 790, 1774, 27, 76, "Message"],
-Cell[34971, 819, 580, 12, 23, "Message"],
-Cell[35554, 833, 1936, 28, 94, "Message"],
-Cell[37493, 863, 1936, 28, 94, "Message"],
-Cell[39432, 893, 564, 12, 23, "Message"],
-Cell[39999, 907, 77, 1, 32, "Output"],
-Cell[40079, 910, 1936, 28, 94, "Message"],
-Cell[42018, 940, 1936, 28, 94, "Message"],
-Cell[43957, 970, 1936, 28, 94, "Message"],
-Cell[45896, 1000, 564, 12, 23, "Message"],
-Cell[46463, 1014, 2010, 32, 95, "Message"],
-Cell[48476, 1048, 2008, 32, 95, "Message"]
-}, Open  ]]
+Cell[20703, 504, 589, 13, 32, "Input"],
+Cell[21295, 519, 761, 19, 66, "Input"],
+Cell[22059, 540, 1818, 42, 121, "Input"]
 }
 ]
 *)
